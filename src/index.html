@@ -339,9 +339,9 @@
             }
         });
 
-        bonui.grid({});
+        var uplsa = bonui.grid({ input: '#upls' });
 
-        var _uplsaItemHeight = bonui.params.col_item_height['uplsa'];
+        var _uplsaItemHeight = uplsa.height;
         var ml = null;
 
         bonui.uploadFile({
@@ -395,8 +395,8 @@
             }
         });
 
-
-
+        bonui.grid({ input: '#uplsb' });
+        
 
     </script>
 </body>

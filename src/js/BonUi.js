@@ -992,7 +992,7 @@ function BonUi() {
     /*
         模态框关闭按钮
     */
-    tools.params.container.delegate('.bonui-modal-close', 'click', function () {
+    tools.params.container.on('click', '.bonui-modal-close', function () {
         $(this).closest('.modal').remove();
     });
 
@@ -1073,7 +1073,7 @@ function BonUi() {
         params = params || {};
 
         if (params.input) {
-            tools.params.container.delegate(params.input, 'click', function () {
+            tools.params.container.on('click', params.input, function () {
                 var $t = $(this),
                     $upImg = $t.closest('.bonui-upimg');
 
@@ -1146,7 +1146,7 @@ function BonUi() {
         params = params || {};
         if (params.input) {
 
-            bonui.params.container.delegate(params.inputContainer + ' ' + params.input, 'click', function (e) {
+            bonui.params.container.on('click', params.inputContainer + ' ' + params.input, function (e) {
                 var imgs = $(this).siblings('.bonui-upimg').addBack(),
                     len = imgs.length,
                     imgStr = [],
@@ -1262,7 +1262,7 @@ function BonUi() {
 
         params = params || {};
 
-        tools.params.container.delegate(params.inputContainer + ' ' + params.input, 'click', function () {
+        tools.params.container.on('click', params.inputContainer + ' ' + params.input, function () {
 
             var $ts = $(this),
                 toggle = $ts.data('toggle'),
@@ -1298,21 +1298,6 @@ function BonUi() {
     tools.grid = function (params) {
 
         params = getParamsObj({ newParams: params });
-
-        //$('.bonui-grid').each(function () {
-        //    var _key = $(this).data('key');
-        //    var $gridMn = $(this).find('.bonui-grid_mn'),
-        //        _colItemW = $gridMn.eq(0).width();
-
-        //    if (!_key) {
-        //        _key = 'default';
-        //    }
-
-        //    tools.params.col_item_height[_key] = _colItemW;
-
-        //    $gridMn.height(_colItemW);
-
-        //});
 
         var $gridMn = $(params.input).find('.bonui-grid_mn'),
             _colItemW = $gridMn.eq(0).width();
