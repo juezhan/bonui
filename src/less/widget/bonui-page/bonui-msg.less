@@ -1,0 +1,45 @@
+@import "../../base/fn";
+@import "../bonui-button/bonui-button";
+
+.bonui-msg {
+    padding-top: @bonuiMsgPaddingTop;
+    text-align: center;
+}
+.bonui-msg__icon-area {
+    margin-bottom: @bonuiMsgIconGap;
+}
+.bonui-msg__text-area {
+    margin-bottom: @bonuiMsgTextGap;
+    padding:0 20px;
+}
+.bonui-msg__text-area a{
+    color:@bonuiLinkColorDefault;
+}
+.bonui-msg__title {
+    margin-bottom: @bonuiMsgTitleGap;
+    font-weight: 400;
+    font-size: 20px;
+}
+.bonui-msg__desc {
+    font-size: 14px;
+    color: @bonuiTextColorGray;
+}
+.bonui-msg__opr-area {
+    margin-bottom: @bonuiMsgOprGap;
+}
+.bonui-msg__extra-area {
+    margin-bottom: @bonuiMsgExtraAreaGap;
+    font-size: 14px;
+    color: @bonuiTextColorGray;
+    a{color: @bonuiLinkColorDefault;}
+}
+
+@media screen and (min-height: @bonuiMsgExtraAreaOfMinHeight) {
+    .bonui-msg__extra-area {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

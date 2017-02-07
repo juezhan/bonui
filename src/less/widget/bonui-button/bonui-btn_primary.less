@@ -1,0 +1,12 @@
+@import "../../base/fn";
+
+.bonui-btn_primary {
+    background-color: @bonuiBtnPrimaryBg;
+    &:not(.bonui-btn_disabled):visited {
+        color: @bonuiBtnFontColor;
+    }
+    &:not(.bonui-btn_disabled):active {
+        color: @bonuiBtnActiveFontColor;
+        background-color: @bonuiBtnPrimaryActiveBg;
+    }
+}

@@ -1,0 +1,71 @@
+﻿@import "../../base/fn";
+
+/*
+    标签页
+*/
+.bonui-tab {
+
+    .bonui-tab__mn {
+        .bonui-flex;
+        text-align: center;
+        height: 100%;
+    }
+
+    .bonui-tab__item {
+        .bonui-flex__item;
+        .flex-center;
+    }
+
+    .bonui-tab__text {
+        font-size: .875rem;
+    }
+
+    .bonui-tab__item__mn {
+    }
+
+    &-nav {
+        width: 100%;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: #e8e8e8;
+        }
+
+        .bonui-tab__mn {
+            width: 100%;
+        }
+
+        .bonui-tab__item {
+            text-align: center;
+
+            .bonui-tab__item__mn {
+                position: relative;
+                padding: .375rem 0;
+                line-height: 1.5rem;
+                width:100%;
+                box-sizing: border-box;
+
+                &:before {
+                    content: '';
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 2px;
+                    background-color: #0094ff;
+                }
+            }
+
+            &.active .bonui-tab__item__mn:before {
+                display: block;
+            }
+        }
+    }
+}

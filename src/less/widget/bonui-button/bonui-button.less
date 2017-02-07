@@ -1,0 +1,91 @@
+@import "../../base/fn";
+@import "bonui-btn_global";
+@import "bonui-btn_default";
+@import "bonui-btn_primary";
+@import "bonui-btn_warn";
+@import "bonui-btn_disabled";
+@import "bonui-btn_plain";
+
+button, input {
+    &.bonui-btn {
+        width: 100%;
+        border-width: 0;
+        outline: 0;
+        -webkit-appearance: none;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &.bonui-btn_inline, &.bonui-btn_mini {
+        width: auto;
+    }
+
+    &.bonui-btn_plain-primary, &.bonui-btn_plain-default {
+        border-width: 1px;
+        background-color: transparent;
+    }
+
+    &.bonui-btn_block {
+        display: block;
+    }
+
+    &.bonui-vcode-btn{
+        background-color: transparent;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        outline: 0;
+    }
+}
+
+.bonui-btn_mini {
+    display: inline-block;
+    padding: 0 1.32em;
+    line-height: @bonuiBtnMiniHeight;
+    font-size: @bonuiBtnMiniFontSize;
+}
+
+.bonui-btn_big {
+    line-height: @bonuiBtnBigHeight;
+    font-size: @bonuiBtnBigFontSize;
+}
+
+.bonui-btn_block {
+    display: block;
+    border-radius: 0;
+
+    &:after {
+        border-radius: 0;
+        border-width:0;
+    }
+}
+
+/*gap betbonen btn*/
+.bonui-btn + .bonui-btn {
+    margin-top: @bonuiBtnDefaultGap;
+}
+
+.bonui-btn.bonui-btn_inline + .bonui-btn.bonui-btn_inline {
+    margin-top: auto;
+    margin-left: @bonuiBtnDefaultGap;
+}
+
+.bonui-btn-area {
+    margin: @bonuiCellsMarginTop @bonuiBtnDefaultGap .3em;
+}
+
+.bonui-btn-area_inline {
+    display: flex;
+
+    .bonui-btn {
+        margin-top: auto;
+        margin-right: @bonuiBtnDefaultGap;
+        width: 100%;
+        flex: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

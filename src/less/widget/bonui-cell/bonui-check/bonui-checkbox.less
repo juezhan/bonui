@@ -1,0 +1,35 @@
+@import "../../../base/fn";
+
+.bonui-cells_checkbox {
+    .bonui-cell__hd {
+        padding-right: @bonuiCellInnerGapH;
+    }
+    .bonui-cell {
+        &:active {
+            background-color: #ECECEC;
+        }
+    }
+    .bonui-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 23px;
+            display: block;
+        }
+    }
+}
+
+// method2 accessbility
+.bonui-check {
+    // checkbox
+    .bonui-cells_checkbox & {
+        &:checked {
+            & + .bonui-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: #09BB07;
+                }
+            }
+        }
+    }
+}

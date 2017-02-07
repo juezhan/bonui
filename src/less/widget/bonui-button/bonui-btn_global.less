@@ -1,0 +1,36 @@
+@import "../../base/fn";
+
+.bonui-btn {
+    outline: none;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    box-sizing: border-box;
+    font-size: @bonuiBtnFontSize;
+    text-align: center;
+    text-decoration: none;
+    color: @bonuiBtnFontColor;
+    line-height: unit(@bonuiBtnHeight/@bonuiBtnFontSize);
+    border-radius: @bonuiBtnBorderRadius;
+    .setTapColor();
+    overflow: hidden;
+    &:after {
+        content: " ";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid rgba(0, 0, 0, .2);
+        transform: scale(.5);
+        transform-origin: 0 0;
+        box-sizing: border-box;
+        border-radius: @bonuiBtnBorderRadius*2;
+    }
+}
+.bonui-btn_inline {
+    display: inline-block;
+}

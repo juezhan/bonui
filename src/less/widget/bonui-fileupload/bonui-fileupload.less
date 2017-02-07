@@ -1,0 +1,159 @@
+﻿
+.bonui-fileupload {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    input {
+        position: absolute;
+        top: 0;
+        right: -1px;
+        font-size: 100px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+    &:hover button {
+        border-color: #bbb;
+        color: #333;
+        background: #ccc;
+    }
+
+    .bonui-fileupload_btn {
+        height: 100%;
+        width: 100%;
+        color: #d2d2d2;
+        overflow: visible;
+        font-size: .75rem;
+        border: 1px dashed #e5e5e5;
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            background-color: #e2e2e2;
+            width: 2px;
+            height: 2px;
+            top: 32%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+        }
+
+        &:after {
+            height: 30%;
+        }
+
+        &:before {
+            width: 30%;
+        }
+    }
+
+    .bonui-fileupload_btn_tit {
+        position: absolute;
+        width: 100%;
+        bottom: 10%;
+        left: 0;
+        font-size: .75rem;
+        line-height: 1.3em;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+    }
+}
+
+.bonui-upimg {
+
+    .bonui-upimg_mn {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: url() 50% 50% no-repeat;
+        background-size: cover;
+
+        .bonui-upimg_close {
+            position: absolute;
+            top: .375rem;
+            right: .375rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            width: 1.5rem;
+            height: 1.5rem;
+            font-size: .875rem;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            transform: rotate(45deg);
+
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                background-color: #fff;
+                width: 1px;
+                height: 1px;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+            }
+
+            &:after {
+                height: 60%;
+            }
+
+            &:before {
+                width: 60%;
+            }
+        }
+    }
+}
+
+.bonui-upimg-mask{background-color:rgba(0, 0, 0, .8);}
+.bonui-upimg-swiper-container {
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    .flex-center;
+
+    .bonui-upimg-swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bonui-upimg-swiper-slide {
+        background: url() 50% 50% no-repeat;
+        background-size: contain;
+        
+    }
+
+    .bonui-upimg-swiper-close,
+    .bonui-upimg-swiper-delete {
+        position: fixed;
+        z-index: 5000;
+    }
+
+    .bonui-upimg-swiper-close {
+        top: 0.75rem;
+        right: .5rem;
+        font-size: 36px;
+        color: #fff;
+    }
+
+    .bonui-upimg-swiper-delete {
+        bottom: 1.25rem;
+        font-size: 48px;
+        color: #fff;
+    }
+}

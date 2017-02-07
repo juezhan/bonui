@@ -1,0 +1,92 @@
+﻿
+html {font-size: 16px;}
+@media screen and (min-width: 360px) {html{font-size:18px}}
+@media screen and (min-width: 410px) {html{font-size:20px}}
+
+/*
+    button 颜色
+*/
+/* C1 默认状态 */ 
+.bonui-btn_c1{background-color: #ff9800;}
+.bonui-btn_c1:not(.bonui-btn_disabled):active {color: rgba(255, 255, 255, 0.6);background-color: #ff9800;}
+.bonui-btn_c1.bonui-btn_disabled{color: rgba(0, 0, 0, 0.3);background-color: #F7F7F7;}
+/* C1 中空状态 */
+.bonui-btn_c1_plain {color: #ff9800;border: 1px solid #ff9800;}
+.bonui-btn_c1_plain:not(.bonui-btn_plain-disabled):active {color: rgba(255, 152, 0, 0.6);border-color: rgba(255, 152, 0, 0.6);}
+.bonui-btn_c1_plain.bonui-btn_plain-disabled{color: rgba(0, 0, 0, 0.2);border-color: rgba(0, 0, 0, 0.2);}
+
+.article-mn{padding:0.9375rem}
+header,footer{color:#fff;}
+
+/*
+.col-0{text-align:right;width:50px;}
+.col-1{width:50px;flex:none}
+.col-2{text-align:left;width:50px;}
+.divider{width:50px;flex:none}
+*/
+
+/*
+    自定义模态框
+*/
+.bonui-modal{min-width:300px;width:80%;}
+.bonui-modal__hd{height:1.5rem}
+
+.bonui-modal__close{right: .375rem;top: .375rem;width: 1.125rem;height: 1.125rem;border:1px solid #888;border-radius:50%;transform:rotate(45deg);}
+.bonui-modal__close:after,
+.bonui-modal__close:before{content:'';display:block;position:absolute;width:1px;height:1px;background-color:#888;top:50%;left:50%;transform:translate(-50%,-50%);}
+.bonui-modal__close:after {height:60%;}
+.bonui-modal__close:before{width:60%;}
+
+.bonui-modal__bd{padding:.75rem}
+
+.gmn{margin-bottom:.5rem;border-bottom: 1px solid #ddd;padding-bottom: .75rem}
+
+.g-upload{margin:0 -.375rem;}
+.g-upload .bonui-grid_mn{border-radius: 0.375rem;box-sizing: border-box;}
+.g-upload .bonui-grid_item{padding:.375rem;box-sizing:border-box;}
+
+
+/*
+    标签页
+*/
+.bonui-tab-nav {position: fixed;left: 0;top: 2.5rem;z-index: 20;background-color:#fff;}
+
+
+/*
+    列表组
+*/
+.bonui-list-group{padding:2.25rem .9375rem 0;}
+.bonui-list-group_mn{font-size:.875rem;}
+.bonui-list-group_item{position:relative;line-height:1.5rem;padding:.375rem 0;}
+.bonui-list-group_item:after{content:'';display:block;position:absolute;left:0;right:0;bottom:0;height:1px;background-color:#e8e8e8}
+
+.bonui-list-group_item_mn{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display:block;}
+
+/*
+    加载更多
+*/
+.bonui-loadmore{margin-top:.875rem;}
+
+/*
+    返回顶部
+*/
+.bonui-gotop{position:fixed;z-index:-1;opacity:0;bottom:3.75rem;right:.75rem;}
+.bonui-gotop.active{z-index:6000;opacity:1;}
+.bonui-gotop_mn{}
+
+
+
+/*.bonui-load-move.loading .bonui-load-move-loading{display:block;}
+.bonui-load-move.loading .bonui-load-move-loaded{display:none;}
+.bonui-load-move.loading .bonui-load-move-complete{display:none;}
+
+.bonui-load-move.complete .bonui-load-move-loading{display:none;}
+.bonui-load-move.complete .bonui-load-move-loaded{display:none;}
+.bonui-load-move.complete .bonui-load-move-complete{display:block;}*/
+
+
+/*.my-flex_item:nth-child(1) .my-flex_item_mn{background-color:#ff9800;}
+.my-flex_item:nth-child(2) .my-flex_item_mn{background-color:#3900ff;}
+.my-flex_item:nth-child(3) .my-flex_item_mn{background-color:#29bf18;}
+.my-flex_item:nth-child(4) .my-flex_item_mn{background-color:#a53434;}*/
+

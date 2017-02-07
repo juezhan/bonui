@@ -1,0 +1,88 @@
+@import "../../base/fn";
+
+.bonui-loadmore {
+
+    .bonui-loadmore_loading {
+        display: none;
+    }
+
+    .bonui-loadmore_loaded {
+        display: block;
+    }
+
+    .bonui-loadmore_complete {
+        display: none;
+    }
+
+    &.loading {
+        .bonui-loadmore_loading {
+            display: block;
+        }
+
+        .bonui-loadmore_loaded,
+        .bonui-loadmore_complete {
+            display: none;
+        }
+    }
+
+    &.complete {
+        .bonui-loadmore_complete {
+            display: block;
+        }
+
+        .bonui-loadmore_loaded,
+        .bonui-loadmore_loading {
+            display: none;
+        }
+    }
+    
+    .bonui-loadmore_mn {
+        margin: 0 auto;
+        line-height: 1.5rem;
+        font-size: .875rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .bonui-loadmore__tips {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .bonui-loadmore_line {
+
+        .bonui-loadmore__tips {
+            position: relative;
+            padding: 0 .5rem;
+            background-color: #FFFFFF;
+            color: @bonuiTextColorGray;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 1px;
+            background-color: @bonuiLineColorLight;
+            left: 0;
+            right: 0;
+            top: 50%;
+        }
+    }
+
+    .bonui-loadmore_dot {
+        .bonui-loadmore__tips {
+            &:before {
+                content: " ";
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: @bonuiLineColorLight;
+                display: inline-block;
+                position: relative;
+                vertical-align: 0;
+                top: -.16em;
+            }
+        }
+    }
+}

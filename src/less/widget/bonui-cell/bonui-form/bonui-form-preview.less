@@ -1,0 +1,89 @@
+@import "../../../base/fn";
+
+.bonui-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        .setTopLine(@bonuiCellBorderColor);
+    }
+    &:after{
+        .setBottomLine(@bonuiCellBorderColor);
+    }
+}
+.bonui-form-preview__hd{
+    position: relative;
+    padding: @bonuiCellGapV @bonuiCellGapH;
+    text-align: right;
+    line-height: 2.5em;
+    &:after{
+        .setBottomLine(@bonuiCellBorderColor);
+        left: @bonuiCellGapH;
+    }
+    .bonui-form-preview__value{
+        font-style: normal;
+        font-size: 1.6em;
+    }
+}
+.bonui-form-preview__bd{
+    padding: @bonuiCellGapV @bonuiCellGapH;
+    font-size: .9em;
+    text-align: right;
+    color: @bonuiTextColorGray;
+    line-height: 2;
+}
+.bonui-form-preview__ft{
+    position: relative;
+    line-height: 50px;
+    display: flex;
+    &:after {
+        .setTopLine(@bonuiDialogLineColor);
+    }
+}
+.bonui-form-preview__item{
+    overflow: hidden;
+}
+.bonui-form-preview__label{
+    float: left;
+    margin-right: 1em;
+    min-width: 4em;
+    color: @bonuiTextColorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.bonui-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.bonui-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: @bonuiDialogLinkColor;
+    text-align: center;
+    .setTapColor();
+    button&{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: @bonuiDialogLinkActiveBc;
+    }
+    &:after {
+        .setLeftLine(@bonuiDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.bonui-form-preview__btn_default {
+    color: @bonuiTextColorGray;
+}
+.bonui-form-preview__btn_primary {
+    color: #0BB20C;
+}

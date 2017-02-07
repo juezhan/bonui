@@ -1,0 +1,30 @@
+@import "../../../base/fn";
+
+.bonui-cell_vcode {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.bonui-vcode-img {
+    margin-left: 5px;
+    height: @bonuiCellHeight;
+    vertical-align: middle;
+}
+
+.bonui-vcode-btn {
+    display: inline-block;
+    height: @bonuiCellHeight;
+    margin-left: 5px;
+    padding: 0 0.6em 0 0.7em;
+    border-left: 1px solid @bonuiLineColorLight;
+    line-height: @bonuiCellHeight;
+    vertical-align: middle;
+    font-size: @bonuiCellFontSize;
+    color: @bonuiDialogLinkColor;
+
+
+    &:active {
+        color: desaturate(@bonuiDialogLinkColor, 30%);
+    }
+} 

@@ -1,0 +1,312 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <!-- Link Swiper's CSS -->
+    <link href="http://beta.jujiaoedu.com/static/local/css/font-m/iconfont.css" rel="stylesheet" />
+
+    <link href="lib/swiper.min.css" rel="stylesheet" />
+    <link href="css/bonui.css" rel="stylesheet" />
+    
+
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+
+        .article-swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .article-swiper-slide {
+            height: auto;
+        }
+
+        header, footer {
+            position: absolute;
+            background-color: #0094ff;
+            z-index: 20;
+            left: 0;
+            right: 0;
+        }
+
+        header {top: 0;}
+
+        footer {
+            bottom: 0;
+        }
+
+        header {
+            background-color: #E4E4E4 !important;
+            height: 2.5rem !important;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #fff !important;
+            height: 3rem !important;
+            border-top: 1px solid #ddd;
+        }
+
+        header, footer {
+            padding: 0 .75rem;
+        }
+
+        header {
+            background-color: #E4E4E4 !important;
+            height: 2.5rem !important;
+            border-bottom: 1px solid #ddd;
+        }
+
+            header > * {
+                height: 100%;
+                text-align: center;
+            }
+
+            header .header-mn {
+                position: relative;
+            }
+
+            header .menu {
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+
+                header .menu.fl {
+                    left: 0;
+                }
+
+            header .tit {
+                font-size: .875rem;
+                text-align: center;
+                margin: 0 2rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+        footer {
+            background-color: #fff !important;
+            height: 3rem !important;
+            border-top: 1px solid #ddd;
+        }
+
+        footer > * {
+                height: 100%;
+                text-align: center;
+            }
+
+        footer {
+            overflow: hidden;
+        }
+
+      
+    </style>
+    <link href="http://beta.jujiaoedu.com/static/local/css/mall/comm-mall-m.css" rel="stylesheet" />
+    <link href="http://beta.jujiaoedu.com/static/local/css/mall/detail-m.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!--<div class="header">
+        <div class="flex-center header-mn">
+            <a class="menu fl" data-href="/v"><i class="icon-back iconbtn"></i></a>
+            <div class="tit">Allianz安联保险“乐学无忧”海外留学保险计划优惠券（内含“挂科”险）</div>
+        </div>
+    </div>-->
+    <footer>
+        <div class="bonui-flex">
+            <div href="/" class="bonui-flex__item flex-center btn-cell">
+                <div>
+                    <i class="icon-home"></i>
+                    <span>主页</span>
+                </div>
+            </div>
+            <div href="/planner" class="bonui-flex__item flex-center btn-cell">
+                <div>
+                    <i class="icon-liuxueguwen"></i>
+                    <span>留学顾问</span>
+                </div>
+            </div>
+            <div href="/apply" class="bonui-flex__item flex-center btn-cell">
+                <div>
+                    <i class="icon-shenqing"></i>
+                    <span>免费申请</span>
+                </div>
+            </div>
+            <div href="/v" class="bonui-flex__item flex-center btn-cell">
+                <div>
+                    <i class="icon-shipin"></i>
+                    <span>视频</span>
+                </div>
+            </div>
+            <div href="/uc" class="bonui-flex__item flex-center btn-cell">
+                <div>
+                    <i class="icon-wode"></i>
+                    <span>我的</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="swiper-container article-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide article-swiper-slide">
+                <div class="g-container">
+                    <form action="/mall/cart/add" id="form1" method="get">
+                        <div class="g">
+                            <div class="swiper-container" id="imgSwiper">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <img src="http://beta.jujiaoedu.com/files/logo/62e/62ec75tq5hv7pwstyd26i5z5l.png" width="270" height="270" alt="" id="midimg" />
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="http://beta.jujiaoedu.com/files/logo/4rq/4rqlhh59i4edxtbwsu5al6iprg.png" width="270" height="270" alt="" id="midimg" />
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="http://beta.jujiaoedu.com/files/logo/2yp/2ypzszfri5k46e6ld42d5nj945.png" width="270" height="270" alt="" id="midimg" />
+                                    </div>
+
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+                        </div>
+                        <div class="g title">
+                            <div class="product-title">
+                                Allianz安联保险“乐学无忧”海外留学保险计划优惠券（内含“挂科”险）<span></span>
+                            </div>
+                        </div>
+                        <div class="g">
+                            <div class="bonui-flex">
+                                <div class="select-lbl b">兑换积分：</div>
+                                <div class="bonui-flex__item">
+                                    <div class="bonui-cell_select">
+                                        <div class="bonui-cell__bd">
+                                            <select id="mySelect" class="bonui-select">
+                                                <option value="">请选择价格</option>
+
+                                                <option value="{&quot;price&quot;:&quot;1&quot;,&quot;score1&quot;:&quot;60&quot;,&quot;price1&quot;:&quot;0.0&quot;}">60积分 + ￥0.0</option>
+
+
+                                                <option value="{&quot;price&quot;:&quot;2&quot;,&quot;score1&quot;:&quot;32&quot;,&quot;price1&quot;:&quot;23.0&quot;}">32积分 + ￥23.0</option>
+
+
+                                                <option value="{&quot;price&quot;:&quot;3&quot;,&quot;score1&quot;:&quot;0&quot;,&quot;price1&quot;:&quot;232.0&quot;}">0积分 + ￥232.0</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="g">
+                            <div class="bonui-flex flex-center">
+                                <div class="ctrnum-lbl">　　数量：</div>
+                                <div class="bonui-flex__item">
+                                    <div name="js_buyBox" class="buybox" data-it="1" data-maxamount="1000" id="j_buyboxnum">
+                                        <div class="bonui-flex ctrnum-wrap">
+                                            <div class="ctrnum-b ctrnum-b-rd ctrnum-b-dis" hidefocus="true"></div>
+                                            <div class="bonui-flex__item ctrnum-qty-mn">
+                                                <input id="tempBuyAmount" readonly="" type="text" value="1" name="number" class="ctrnum-qty" autocomplete="off">
+                                            </div>
+                                            <div class="ctrnum-b ctrnum-b-ad" hidefocus="true"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g">
+                            <div class="bonui-btn btn-2" id="addCart" onclick="addCart();">加入购物车</div>
+                        </div>
+
+
+
+
+                        <input type="hidden" name="id" value="9">
+                        <input type="hidden" name="price" id="price" value="0">
+                        <div class="g detail">
+                            <div class="tab-1">
+                                <div class="item">产品描述</div>
+                            </div>
+                            <div>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/25mzslvwe1nnd40sr26fndbgmn.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/13kc7jxkd384iv54vp20cz02sf.png"></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/46cblkmyu21w36117jbx5u13nu.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/5h6tkbefw562zir8y8ark9359f.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/317liqwt719ramfq40c8bbbbiz.png"></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/57k61ysre3ma2afzat60b1d3na.png"></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/2i8j494ls2uc33cskb4ux530sg.png"></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p style="text-align: center"><br></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/42t6ic9pqhvssj5a449x4fzcg.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/5582pi0m7i7qlbqlg4dvlgzgx.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/2j8e60ipt43mz2b2e3cc3xth9.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/4xzi28kat22507mvzv4baht3bz.png"></p>
+                                <p><br></p>
+                                <p style="text-align: center"><img src="http://beta.jujiaoedu.com/files/matter/html/0/140/1ec5apwabvptg4pfy3276l1nt.png"></p>
+                                <p><br></p>
+                                <p><br></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Add Scroll Bar -->
+        <div class="swiper-scrollbar article-swiper-scrollbar"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/swiper.jquery.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.article-swiper', {
+            scrollbar: '.article-swiper-scrollbar',
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            mousewheelControl: true,
+            freeMode: true
+        });
+        var imgSwiper = new Swiper('#imgSwiper', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            centeredSlides: true,
+            resistanceRatio: 0,
+            autoplay: 0,
+            autoplayDisableOnInteraction: false
+        });
+    </script>
+</body>
+</html>

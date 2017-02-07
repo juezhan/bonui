@@ -1,0 +1,35 @@
+@import "../../base/fn";
+
+@bonuiGalleryOprHeight: 60px;
+.bonui-gallery {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    z-index: 1000;
+}
+.bonui-gallery__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: @bonuiGalleryOprHeight;
+    left: 0;
+    background: center center no-repeat;
+    background-size: contain;
+}
+.bonui-gallery__opr {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    line-height: @bonuiGalleryOprHeight;
+    text-align: center;
+}
+.bonui-gallery__del {
+    display: block;
+}

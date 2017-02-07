@@ -1,0 +1,21 @@
+@import "../../base/fn";
+
+.bonui-flex {
+    display: flex;
+}
+.bonui-flex__item{
+    flex: 1;
+}
+
+.bonui-grid{
+	&:after,
+	&:before{display:table;content:'';clear:both;}
+
+	[class^=bonui-col_]{float: left;}
+
+	.bonui-col_1{width:100%}
+	.bonui-col_2{width:50%}
+	.bonui-col_3{width:33.3333%}
+	.bonui-col_4{width:25%}
+	.bonui-col_5{width:20%}
+}

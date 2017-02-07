@@ -1,0 +1,31 @@
+{
+  "name": "BonUI",
+  "author":"Adolf Sang",
+  "version": "1.0.0",
+  "description": "BonUI 百邦UI 集成了 jQuery 3.1+、Swiper 3.4+、fastclick 1.0 +, WeUI Css 1.1+",
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-file-include": "^1.0.0",
+    "gulp-header": "^1.8.8",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.2.0",
+    "gulp-make-css-url-version": "0.0.13",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rev-append": "^0.1.6",
+    "gulp-rev-collector": "^1.0.5",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp.spritesmith": "^6.2.1"
+  }
+}

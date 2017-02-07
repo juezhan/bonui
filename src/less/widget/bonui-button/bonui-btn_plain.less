@@ -1,0 +1,50 @@
+@import "../../base/fn";
+
+.bonui-btn_plain-primary {
+    color: @bonuiBtnPlainPrimaryColor;
+    border: 1px solid @bonuiBtnPlainPrimaryBorderColor;
+    &:not(.bonui-btn_plain-disabled):active {
+        color:@bonuiBtnPlainPrimaryActiveColor;
+        border-color: @bonuiBtnPlainPrimaryActiveBorderColor;
+    }
+    &:after {
+        border-width: 0;
+    }
+}
+
+.bonui-btn_plain-default {
+    color: @bonuiBtnPlainDefaultColor;
+    border: 1px solid @bonuiBtnPlainDefaultBorderColor;
+    &:not(.bonui-btn_plain-disabled):active {
+        color:@bonuiBtnPlainDefaultActiveColor;
+        border-color: @bonuiBtnPlainDefaultActiveBorderColor;
+    }
+    &:after {
+        border-width: 0;
+    }
+}
+
+.bonui-btn_plain-warn{
+    color: @bonuiBtnPlainWarnColor;
+    border: 1px solid @bonuiBtnPlainWarnBorderColor;
+    &:not(.bonui-btn_plain-disabled):active {
+        color:@bonuiBtnPlainWarnActiveColor;
+        border-color: @bonuiBtnPlainWarnActiveBorderColor;
+    }
+    &:after {
+        border-width: 0;
+    }
+}
+
+.bonui-btn_plain-disabled{
+    color:rgba(0,0,0,.2);
+    border-color:rgba(0,0,0,.2);
+    &.bonui-btn_plain-primary{
+        color:lighten(@bonuiBtnPrimaryDisabledBg,10%);
+        border-color:lighten(@bonuiBtnPrimaryDisabledBg,10%);
+    }    
+    &.bonui-btn_plain-warn{
+        color:lighten(@bonuiBtnwarnDisabledBg,10%);
+        border-color:lighten(@bonuiBtnwarnDisabledBg,10%);
+    }
+}

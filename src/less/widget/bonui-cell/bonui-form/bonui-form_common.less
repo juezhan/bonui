@@ -1,0 +1,77 @@
+@import "../../../base/fn";
+
+.bonui-label{
+  display:block;
+  width:@bonuiCellLabelWidth;
+  .text_wrap();
+}
+.bonui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: @bonuiCellLineHeight;
+    line-height: @bonuiCellLineHeight;
+
+    // hides the spin-button
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+.bonui-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    outline: 0;
+}
+
+.bonui-textarea-counter{
+    color: @bonuiTextColorTips;
+    text-align: right;
+    .bonui-cell_warn &{
+        color: @bonuiTextColorWarn;
+    }
+}
+
+.bonui-toptips {
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:5px;
+    font-size:14px;
+    text-align: center;
+    color: #FFF;
+    z-index: 5000;
+    .text_wrap();
+}
+.bonui-toptips_warn {
+    background-color: @bonuiTextColorWarn;
+}
+.bonui-toptips_success {
+    background-color: @bonuiTextColorSuccess;
+}
+.bonui-cells_form {
+    .bonui-cell__ft{
+        font-size:0;
+    }
+    .bonui-icon-warn{
+        display:none;
+    }
+    input, textarea, label[for]{
+        .setTapColor();
+    }
+}
+.bonui-cell_warn{
+    color:@bonuiTextColorWarn;
+    .bonui-icon-warn{display:inline-block;}
+}

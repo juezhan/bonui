@@ -1,0 +1,89 @@
+@import "../../../base/fn";
+
+.bonui-cell_select {
+
+    .bonui-select {
+        padding-right: unit(30 / @bonFontSize, rem);
+    }
+
+    .bonui-cell__bd {
+        position: relative;
+
+        &:after {
+            content: " ";
+            ._setArrow(.5rem, #C8C8CD, 2px);
+            position: absolute;
+            top: 50%;
+            right: .25rem;
+            margin-top: -.25rem;
+        }
+
+        &.arrow_right {
+            &:after {
+                transform: matrix(0.71,0.71,-0.71,0.71,0,0); // rotate(-45deg)
+            }
+        }
+
+        &.arrow_down {
+            &:after {
+                transform: matrix(-0.71,0.71,-0.71,-0.71,0,0); // rotate(135deg);
+            }
+        }
+    }
+}
+
+.bonui-select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: @bonuiCellLineHeight;
+    line-height: @bonuiCellLineHeight;
+    position: relative;
+    z-index: 1;
+    padding-left:0;
+}
+
+.bonui-cell_select-before {
+    padding-right: @bonuiCellGapH;
+
+    .bonui-select {
+        width: @bonuiCellLabelWidth;
+        box-sizing: border-box;
+    }
+
+    .bonui-cell__hd {
+        position: relative;
+
+        &:after {
+            .setRightLine(@bonuiCellBorderColor);
+        }
+
+        &:before {
+            content: " ";
+            .setArrow(right, 6px, #C8C8CD, 2px);
+            position: absolute;
+            top: 50%;
+            right: @bonuiCellGapH;
+            margin-top: -3px;
+        }
+    }
+
+    .bonui-cell__bd {
+        padding-left: @bonuiCellGapH;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.bonui-cell_select-after {
+    padding-left: @bonuiCellGapH;
+
+    .bonui-select {
+        padding-left: 0;
+    }
+}

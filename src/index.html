@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>index</title>
+
+    <link href="css/bonui.css" rel="stylesheet" />
+
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body id="body">
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/swiper.jquery.min.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script src="js/BonUi.js"></script>
+
+    <div class="pages">
+        <div class="page">
+            <header class="bonui-header">
+                <div class="bonui-header__mn">
+                    <div class="bonui-header__menu">
+                        <i class="bonui-icon-back"></i>
+                    </div>
+                    <div class="bonui-header__bd">header</div>
+                    <div class="bonui-header__menu">
+                        <i class="bonui-icon-delete"></i>
+                    </div>
+                </div>
+            </header>
+            <article class="bonui-article">
+                <div class="article-mn">
+                    <div class="gmn">
+                        <div>上传组件</div>
+                        <div class="bonui-grid g-upload" id="upls" data-key="uplsa">
+                            <div class="bonui-col_3 bonui-grid_item">
+                                <div class="bonui-grid_mn bonui-fileupload">
+                                    <div class="bonui-fileupload_btn">
+                                        <div class="bonui-fileupload_btn_tit">最多上传n张<br>图片</div>
+                                    </div>
+                                    <input type="file" id="file1" multiple="" accept="image/png,image/gif,image/jpg,image/jpeg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gmn">
+                        <div>上传组件</div>
+                        <div class="bonui-grid g-upload" id="uplsb" data-key="uplsb">
+                            <div class="bonui-col_3 bonui-grid_item bonui-upimg" data-url="img/fapiao.jpg">
+                                <div class="bonui-grid_mn bonui-upimg_mn" style="background-image:url(img/fapiao.jpg);">
+                                    <span class="bonui-upimg_close"></span>
+                                </div>
+                            </div>
+                            <div class="bonui-col_3 bonui-grid_item">
+                                <div class="bonui-grid_mn bonui-fileupload">
+                                    <div class="bonui-fileupload_btn">
+                                        <div class="bonui-fileupload_btn_tit">最多上传n张<br>图片</div>
+                                    </div>
+                                    <input type="file" multiple="" accept="image/png,image/gif,image/jpg,image/jpeg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gmn">
+                        <div>固定宽度列</div>
+                        <div class="bonui-flex">
+                            <div class="bonui-col_2">
+                                在历史资料中曾这样记载过这支神秘的部队
+                            </div>
+                            <div class="bonui-col_4">
+                                随后燕云十八骑一出现
+                            </div>
+                            <div class="bonui-col_4">
+                                突厥人就大吃一惊
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonui-btn bonui-btn_primary" id="showModal">自定义模态框</div>
+
+                    <div class="bonui-btn bonui-btn_primary" id="showMessage">message</div>
+
+                    <div class="bonui-btn bonui-btn_primary" id="showDialog">Dialog</div>
+
+                    <div class="bonui-cell">
+                        <div class="bonui-cell__hd"><label class="bonui-label">地区</label></div>
+                        <div class="bonui-cell__bd">
+                            <input class="bonui-input" type="text" id="ipt_Area" placeholder="请选择" />
+                        </div>
+                    </div>
+
+                    <div class="bonui-cell">
+                        <div class="bonui-cell__hd"><label class="bonui-label">qq</label></div>
+                        <div class="bonui-cell__bd">
+                            <input class="bonui-input" type="number" pattern="[0-9]*" placeholder="请输入qq号">
+                        </div>
+                    </div>
+
+                    <a data-target="buttons?a=11&b=21" class="js_grid" href="javascript:void(0)">Go Buttons</a><br />
+                    <a data-target="inputs?a=21&b=22" class="js_grid" href="javascript:void(0)">Go Inputs</a><br />
+                    <a data-target="toast?a=31&b=23" class="js_grid" href="javascript:void(0)">Go Toast</a><br />
+                    <a data-target="buttons?a=41&b=24" class="js_grid" href="javascript:void(0)">Go Buttons</a><br />
+
+                    <div class="bonui-cell_select">
+                        <div class="bonui-cell__bd arrow_right">
+                            <input type="text" class="bonui-input" placeholder="asdf" />
+                        </div>
+                    </div>
+                    <div class="bonui-flex">
+                        <div class="bonui-flex__item bonui-cell_select">
+                            <div class="bonui-cell__bd arrow_right">
+                                <select class="bonui-select">
+                                    <option>sadf 1</option>
+                                    <option>sadf 2</option>
+                                    <option>sadf 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonui-cell bonui-cell_switch">
+                        <div class="bonui-cell__bd">标题文字</div>
+                        <div class="bonui-cell__ft">
+                            <input class="bonui-switch" type="checkbox" />
+                        </div>
+                    </div>
+                    <div class="bonui-cell ">
+                        <div class="bonui-cell__bd">
+                            <input type="text" class="bonui-input" />
+                        </div>
+                    </div>
+                    <div class="bonui-cell">
+                        <div class="bonui-cell__bd">
+                            <div class="bonui-cell bonui-cell-items bonui-cell_select">
+                                <div class="bonui-cell__bd arrow_right">
+                                    <select class="bonui-select">
+                                        <option>省 1</option>
+                                        <option>省 2</option>
+                                        <option>省 3</option>
+                                    </select>
+                                </div>
+                                <div class="bonui-cell__bd arrow_right">
+                                    <select class="bonui-select">
+                                        <option>市 1</option>
+                                        <option>市 2</option>
+                                        <option>市 3</option>
+                                    </select>
+                                </div>
+                                <div class="bonui-cell__bd arrow_right">
+                                    <select class="bonui-select">
+                                        <option>区 1</option>
+                                        <option>区 2</option>
+                                        <option>区 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a data-target="msg_success?a=41&b=24" class="bonui-btn bonui-btn_primary js_grid" href="javascript:void(0)">Go 操作成功</a>
+                    <a data-target="msg_warn?a=41&b=24" class="bonui-btn bonui-btn_primary js_grid" href="javascript:void(0)">Go 操作失败</a>
+                    <a data-target="dialog?a=41&b=24" class="bonui-btn bonui-btn_primary js_grid" href="javascript:void(0)">Go DIALOG</a>
+                    <a data-target="flex?a=41&b=24" class="bonui-btn bonui-btn_primary js_grid" href="javascript:void(0)">Go Flex</a>
+
+                </div>
+            </article>
+            <footer class="bonui-footer ">
+                <div class="bonui-footer__mn bonui-tab">
+                    <div class="bonui-tab__mn">
+                        <div class="bonui-tab__item">
+                            <div class="bonui-tab__item__mn">
+                                <i class="bonui-icon-delete"></i>
+                                <div class="bonui-tab__text">首页</div>
+                            </div>
+                        </div>
+                        <div class="bonui-tab__item">
+                            <div class="bonui-tab__item__mn">
+                                <i class="bonui-icon-delete"></i>
+                                <div class="bonui-tab__text">首页</div>
+                            </div>
+                        </div>
+                        <div class="bonui-tab__item">
+                            <div class="bonui-tab__item__mn">
+                                <i class="bonui-icon-delete"></i>
+                                <div class="bonui-tab__text">首页</div>
+                            </div>
+                        </div>
+                        <div class="bonui-tab__item">
+                            <div class="bonui-tab__item__mn">
+                                <i class="bonui-icon-delete"></i>
+                                <div class="bonui-tab__text">首页</div>
+                            </div>
+                        </div>
+                        <div class="bonui-tab__item">
+                            <div class="bonui-tab__item__mn">
+                                <i class="bonui-icon-delete"></i>
+                                <div class="bonui-tab__text">首页</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        $('#showMessage').click(function () {
+            bonui.message({ text: '咋滴' });
+        });
+
+        $('#showModal').click(function () {
+            var _html = '<div class="bonui-modal__hd">\
+                            <div class="bonui-modal__close bonui-modal-close"></div>\
+                        </div>\
+                        <div class="bonui-modal__bd">\
+                            <div class="bonui-btn bonui-btn_primary btn1">OK 1</div>\
+                            <div class="bonui-btn bonui-btn_primary btn2">OK 2</div>\
+                            <div class="bonui-btn bonui-btn_primary btn3">OK 3</div>\
+                            <div class="bonui-btn bonui-btn_c1 bonui-modal-close">关闭</div>\
+                        </div>';
+
+            var m = bonui.modal({ html: _html });
+
+            m.find('.btn1').click(function () {
+                console.log('ok 1');
+            });
+
+            m.find('.btn2').click(function () {
+                console.log('ok 2');
+            });
+
+            m.find('.btn3').click(function () {
+                console.log('ok 3');
+            });
+
+            m.find('.bonui-modal-close').click(function () {
+                console.log('bonui-modal-close');
+            });
+
+        });
+
+        $('#showDialog').click(function () {
+            bonui.dialog({
+                title: '弹窗标题',
+                html: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
+                buttons: [
+                    {
+                        text: '辅助操作',
+                        click: function (m, e) {
+                            alert('辅助操作');
+                        }
+                    },
+                    {
+                        text: '主操作',
+                        primary: true,
+                        click: function (m, e) {
+                            alert('主操作');
+                        }
+                    }
+                ]
+
+            });
+        });
+
+        $('#ipt_Area').click(function () {
+            bonui.picker({
+                input: '#ipt_Area',
+                cols: [
+                    {
+                        values: [
+                            { display: '1' },
+                            { display: '2' },
+                            { display: '3' },
+                            { display: '4' },
+                            { display: '5' }
+                        ],
+                        css: 'col-0'
+                    },
+                    {
+                        divider: true,
+                        content: ':',
+                        css: 'divider'
+                    },
+                    {
+                        values: [
+                            { display: 'a' },
+                            { display: 'b' },
+                            { display: 'c' },
+                            { display: 'd' },
+                            { display: 'e' }
+                        ],
+                        css: 'col-1'
+                    },
+                    {
+                        divider: true,
+                        content: ':',
+                        css: 'divider'
+                    },
+                    {
+                        values: [
+                            { display: 'A' },
+                            { display: 'B' },
+                            { display: 'C' },
+                            { display: 'D' },
+                            { display: 'E' }
+                        ],
+                        css: 'col-2'
+                    }
+                ]
+            });
+        });
+
+        //图片预览
+        bonui.upimgPreview({
+            inputContainer: '#uplsb',
+            input: '.bonui-upimg',
+            tapClose: false,
+            closeButton: {
+                visibility: true,
+            }
+        });
+
+        //关闭 上传图片小图
+        bonui.upimgClose({
+            input: '#uplsb .bonui-upimg_close',
+            callBack: function (_obj) {
+                console.log('asdf:' + _obj.upImg.data('url'));
+                return false;
+            }
+        });
+
+        bonui.grid({});
+
+        var _uplsaItemHeight = bonui.params.col_item_height['uplsa'];
+        var ml = null;
+
+        bonui.uploadFile({
+            input: '#upls',
+            quality: 0.8,
+            before: function () {
+                ml = bonui.loadingToast();
+            },
+            success: function (results) {
+
+                if (results.length > 0) {
+                    var html = [];
+                    for (var i = 0; i < results.length; i++) {
+
+                        var result = results[i];
+
+                        $('<div class="bonui-col_3 bonui-grid_item bonui-upimg"  data-url="' + result.blob + '" >\
+                                    <div class="bonui-grid_mn bonui-upimg_mn" style="background-image:url(' + result.blob + ');height:' + _uplsaItemHeight + 'px;">\
+                                        <span class="bonui-upimg_close"></span>\
+                                        </div>\
+                                    </div>').insertBefore($('#upls .bonui-grid_item:last'));
+                    }
+                }
+                bonui.close(ml);
+            },
+            close: {
+                callBack: function (_obj) {
+                    console.log(_obj.upImg.data('url'));
+                }
+            },
+            preview: {
+                input: '.bonui-upimg',
+                tapClose: true,
+                deleteButton: {
+                    callBack: function (obj) { },
+                    callBackBefore: function (obj) {
+                        var m = bonui.confirm({
+                            hasTitle: false,
+                            text: '啊呦确定？',
+                            buttonConfirm: {
+                                click: function () {
+                                    obj.deleteFunction();
+                                }
+                            }
+                        });
+                    }
+                },
+                closeButton: {
+                    visibility: true,
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+</html>
