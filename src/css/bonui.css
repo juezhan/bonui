@@ -1417,41 +1417,6 @@ input.bonui-vcode-btn {
 .bonui-cell_link:first-child:before {
   display: block;
 }
-.bonui-check__label {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.bonui-check {
-  position: absolute;
-  left: -9999em;
-}
-.bonui-cells_radio .bonui-cell__ft {
-  padding-left: 0.35em;
-}
-.bonui-cells_radio .bonui-cell:active {
-  background-color: #ECECEC;
-}
-.bonui-cells_radio .bonui-check:checked + .bonui-icon-checked:before {
-  display: block;
-  content: '\EA08';
-  color: #09BB07;
-  font-size: 16px;
-}
-.bonui-cells_checkbox .bonui-cell__hd {
-  padding-right: 0.35em;
-}
-.bonui-cells_checkbox .bonui-cell:active {
-  background-color: #ECECEC;
-}
-.bonui-cells_checkbox .bonui-icon-checked:before {
-  content: '\EA01';
-  color: #C9C9C9;
-  font-size: 23px;
-  display: block;
-}
-.bonui-cells_checkbox .bonui-check:checked + .bonui-icon-checked:before {
-  content: '\EA06';
-  color: #09BB07;
-}
 .bonui-label {
   display: block;
   width: 6.5625rem;
@@ -2392,6 +2357,13 @@ button.bonui-form-preview__btn {
 .bonui-tab-nav .bonui-tab__item.active .bonui-tab__item__mn:before {
   display: block;
 }
+.bonui-plank {
+  position: fixed;
+  z-index: 5000;
+  background-color: #FFFFFF;
+  text-align: center;
+  overflow: hidden;
+}
 .bonui-loading {
   width: 20px;
   height: 20px;
@@ -2467,28 +2439,47 @@ button.bonui-form-preview__btn {
 .bonui-flex__item {
   flex: 1;
 }
+.bonui-grid {
+  font-size: 0;
+  line-height: 0;
+}
 .bonui-grid:after,
 .bonui-grid:before {
   display: table;
   content: '';
   clear: both;
 }
-.bonui-grid [class^=bonui-col_] {
-  float: left;
+.bonui-grid .bonui-grid_item {
+  position: relative;
 }
-.bonui-grid .bonui-col_1 {
+.bonui-grid .bonui-grid_item:before {
+  display: block;
+  content: '';
+  padding-top: 100%;
+}
+.bonui-grid .bonui-grid_item_mn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.bonui-grid [class^=bonui-grid_col_] {
+  display: inline-block;
+}
+.bonui-grid .bonui-grid_col_1 {
   width: 100%;
 }
-.bonui-grid .bonui-col_2 {
+.bonui-grid .bonui-grid_col_2 {
   width: 50%;
 }
-.bonui-grid .bonui-col_3 {
+.bonui-grid .bonui-grid_col_3 {
   width: 33.3333%;
 }
-.bonui-grid .bonui-col_4 {
+.bonui-grid .bonui-grid_col_4 {
   width: 25%;
 }
-.bonui-grid .bonui-col_5 {
+.bonui-grid .bonui-grid_col_5 {
   width: 20%;
 }
 .bonui-picker {
@@ -2540,6 +2531,12 @@ button.bonui-form-preview__btn {
   overflow: hidden;
 }
 .bonui-picker__group {
+  display: flex;
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+.bonui-picker__group .bonui-picker__group_item {
   flex: 1;
   position: relative;
   height: 100%;
@@ -2685,10 +2682,13 @@ button.bonui-form-preview__btn {
 }
 .bonui-upimg .bonui-upimg_mn {
   position: relative;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  background: url() 50% 50% no-repeat;
+  background: 50% 50% no-repeat;
   background-size: cover;
+  box-sizing: border-box;
 }
 .bonui-upimg .bonui-upimg_mn .bonui-upimg_close {
   position: absolute;

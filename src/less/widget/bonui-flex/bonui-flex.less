@@ -6,16 +6,34 @@
 .bonui-flex__item{
     flex: 1;
 }
-
+//九宫格
 .bonui-grid{
 	&:after,
 	&:before{display:table;content:'';clear:both;}
+	font-size: 0;
+	line-height: 0;
 
-	[class^=bonui-col_]{float: left;}
+	.bonui-grid_item{
+		position: relative;
+		&:before{
+			display: block;
+			content: '';
+			padding-top: 100%;
+		}
+		&_mn{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0;
+			left: 0;
+		}
+	}
 
-	.bonui-col_1{width:100%}
-	.bonui-col_2{width:50%}
-	.bonui-col_3{width:33.3333%}
-	.bonui-col_4{width:25%}
-	.bonui-col_5{width:20%}
+	[class^=bonui-grid_col_]{display: inline-block;}
+
+	.bonui-grid_col_1{width:100%}
+	.bonui-grid_col_2{width:50%}
+	.bonui-grid_col_3{width:33.3333%}
+	.bonui-grid_col_4{width:25%}
+	.bonui-grid_col_5{width:20%}
 }

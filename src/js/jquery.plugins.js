@@ -117,5 +117,4 @@ $.fn.localResizeIMG = function (obj) {
 
     }
 
-
 };

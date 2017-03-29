@@ -1,8 +1,7 @@
 ﻿/// <reference path="../lib/jquery-3.1.1.min.js" />
-/// <reference path="../lib/jquery-3.1.1.min.js" />
 /// <reference path="../lib/swiper.jquery.min.js" />
 $(function () {
-    FastClick.attach(document.body);
+    // FastClick.attach(document.body); 影响文本框焦点事件
 });
 
 function BonUi() {
@@ -34,13 +33,13 @@ function BonUi() {
 
     // 提示框
     /*
-        bonui.toast({
-            text:string,        // 提示文字
-            icon:string,        // 提示消息图标 tools.params.toastDefaultIcon
-            close:bool,         // 自动关闭 true,
-            closeTime:int       // 提示框显示时间 tools.params.toastCloseTime 
-        });
-    */
+     bonui.toast({
+     text:string,        // 提示文字
+     icon:string,        // 提示消息图标 tools.params.toastDefaultIcon
+     close:bool,         // 自动关闭 true,
+     closeTime:int       // 提示框显示时间 tools.params.toastCloseTime
+     });
+     */
     tools.toast = function (params) {
 
         params = params || {};
@@ -67,11 +66,11 @@ function BonUi() {
 
     // 加载 提示框
     /*
-        bonui.loadingToast({
-            text:string,    // 提示文字
-            icon:string     // 提示消息图标 tools.params.toastLoadingIcon
-        });
-    */
+     bonui.loadingToast({
+     text:string,    // 提示文字
+     icon:string     // 提示消息图标 tools.params.toastLoadingIcon
+     });
+     */
     tools.loadingToast = function (params) {
 
         params = params || {};
@@ -85,49 +84,50 @@ function BonUi() {
 
     // 关闭指定 模块
     /*
-        bonui.close(m); // m:bonui 返回的模块
-    */
+     bonui.close(m); // m:bonui 返回的模块
+     */
     tools.close = function (m) {
+
         m.remove();
     };
 
     // 对话框
     /*
-        bonui.dialog({
-                        title:string,       // 标题    null 
-                        hasTitle:bool,      // 有标题  false
-                        html:string,        // 内容    ''
-                        buttons:[
-                            {
-                                text:string,                // 按钮标题                                
-                                primary:bool,               // 推荐操作 false (true文字高亮加粗)
-                                click: function (m, e) {}   // 按钮点击回调函数
-                            },
-                            ……
-                        ],
-                    });
-                    
-        bonui.dialog({
-                        title: '弹窗标题',
-                        html: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
-                        buttons: [
-                            {
-                                text: '辅助操作',
-                                click: function (m, e) {
-                                    alert('辅助操作');
-                                }
-                            },
-                            {
-                                text: '主操作',
-                                primary: true,
-                                click: function (m, e) {
-                                    alert('主操作');
-                                }
-                            }
-                        ]
+     bonui.dialog({
+     title:string,       // 标题    null
+     hasTitle:bool,      // 有标题  false
+     html:string,        // 内容    ''
+     buttons:[
+     {
+     text:string,                // 按钮标题
+     primary:bool,               // 推荐操作 false (true文字高亮加粗)
+     click: function (m, e) {}   // 按钮点击回调函数
+     },
+     ……
+     ],
+     });
 
-        });
-    */
+     bonui.dialog({
+     title: '弹窗标题',
+     html: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
+     buttons: [
+     {
+     text: '辅助操作',
+     click: function (m, e) {
+     alert('辅助操作');
+     }
+     },
+     {
+     text: '主操作',
+     primary: true,
+     click: function (m, e) {
+     alert('主操作');
+     }
+     }
+     ]
+
+     });
+     */
     tools.dialog = function (params) {
         params = params || {};
 
@@ -169,15 +169,15 @@ function BonUi() {
     // 警告框
     /*
 
-    bonui.alert({
-                    title:string,       // 标题    null 
-                    hasTitle:bool,      // 有标题  false
-                    text:string,        // 内容    ''
-                    buttonText:string,  // 按钮文字 tools.params.dialogButtonConfirmText
-                    click:function      // 按钮回调函数   null
-                });
-    
-    */
+     bonui.alert({
+     title:string,       // 标题    null
+     hasTitle:bool,      // 有标题  false
+     text:string,        // 内容    ''
+     buttonText:string,  // 按钮文字 tools.params.dialogButtonConfirmText
+     click:function      // 按钮回调函数   null
+     });
+
+     */
     tools.alert = function (params) {
 
         params = params || {};
@@ -212,26 +212,27 @@ function BonUi() {
 
     };
 
+    // 确认选择框
     /*
- 
+
      bonui.confirm({
-                     title:string,       // 标题    null 
-                     hasTitle:bool,      // 有标题  false
-                     text:string,        // 内容    ''
-                     buttonConfirm:{    // 确定按钮
-                        text:'',        // 按钮文字 tools.params.dialogButtonConfirmText
-                        primary:'',     // 是推荐操作    true
-                        close:'',       // 点击后关闭当前 Confirm     true
-                        click:function  // 按钮回调函数   null
-                     },
-                     buttonCancle:{     // 取消按钮
-                        text:'',        // 按钮文字 tools.params.dialogButtonConfirmText
-                        primary:'',     // 是推荐操作    false
-                        close:'',       // 点击后关闭当前 Confirm     true
-                        click:function  // 按钮回调函数   null
-                     }
-                 });
-     
+     title:string,       // 标题    null
+     hasTitle:bool,      // 有标题  false
+     text:string,        // 内容    ''
+     buttonConfirm:{    // 确定按钮
+     text:'',        // 按钮文字 tools.params.dialogButtonConfirmText
+     primary:'',     // 是推荐操作    true
+     close:'',       // 点击后关闭当前 Confirm     true
+     click:function  // 按钮回调函数   null
+     },
+     buttonCancle:{     // 取消按钮
+     text:'',        // 按钮文字 tools.params.dialogButtonConfirmText
+     primary:'',     // 是推荐操作    false
+     close:'',       // 点击后关闭当前 Confirm     true
+     click:function  // 按钮回调函数   null
+     }
+     });
+
      */
     tools.confirm = function (params) {
 
@@ -280,42 +281,42 @@ function BonUi() {
 
     //模态框
     /*
-        bonui.modal({ 
-                        html: string,   // 模态框内容 html ***** 必填 *****
-                        css: string     // css 
-                    });
+     bonui.modal({
+     html: string,   // 模态框内容 html ***** 必填 *****
+     css: string     // css
+     });
 
-            点击带有 ‘bonui-modal-close’ 的元素可以触发模态框关闭事件
+     点击带有 ‘bonui-modal-close’ 的元素可以触发模态框关闭事件
 
-            var _html = '<div class="bonui-modal__hd">\
-                            <div class="bonui-modal__close bonui-modal-close"></div>\
-                        </div>\
-                        <div class="bonui-modal__bd">\
-                            <div class="bonui-btn bonui-btn_primary btn1">OK 1</div>\
-                            <div class="bonui-btn bonui-btn_primary btn2">OK 2</div>\
-                            <div class="bonui-btn bonui-btn_primary btn3">OK 3</div>\
-                            <div class="bonui-btn bonui-btn_c1 bonui-modal-close">关闭</div>\
-                        </div>';
+     var _html = '<div class="bonui-modal__hd">\
+     <div class="bonui-modal__close bonui-modal-close"></div>\
+     </div>\
+     <div class="bonui-modal__bd">\
+     <div class="bonui-btn bonui-btn_primary btn1">OK 1</div>\
+     <div class="bonui-btn bonui-btn_primary btn2">OK 2</div>\
+     <div class="bonui-btn bonui-btn_primary btn3">OK 3</div>\
+     <div class="bonui-btn bonui-btn_c1 bonui-modal-close">关闭</div>\
+     </div>';
 
-            var m = bonui.modal({ html: _html });
+     var m = bonui.modal({ html: _html });
 
-            m.find('.btn1').click(function () {
-                console.log('ok 1');
-            });
+     m.find('.btn1').click(function () {
+     console.log('ok 1');
+     });
 
-            m.find('.btn2').click(function () {
-                console.log('ok 2');
-            });
+     m.find('.btn2').click(function () {
+     console.log('ok 2');
+     });
 
-            m.find('.btn3').click(function () {
-                console.log('ok 3');
-            });
+     m.find('.btn3').click(function () {
+     console.log('ok 3');
+     });
 
-            m.find('.bonui-modal-close').click(function () {
-                console.log('bonui-modal-close');
-            });
-    
-    */
+     m.find('.bonui-modal-close').click(function () {
+     console.log('bonui-modal-close');
+     });
+
+     */
     tools.modal = function (params) {
 
         params = params || {};
@@ -329,40 +330,43 @@ function BonUi() {
 
         tools.params.container.append(model);
 
+        dialogShowBefore();
+
         return model;
     };
 
     //操作列表
     /*
-        bonui.actionsheet({
-            menus:[]        // 操作按钮组
-                            // text:按钮名称
-                            // click:按钮点击回调函数
-        });
-        例：
-        bonui.actionsheet({
-            menus: [
-                {
-                    buttons: [
-                        { text: '示例菜单 1', click: function (m) { alert('示例菜单 1'); } },
-                        { text: '示例菜单 2', click: function (m) { alert('示例菜单 2'); } }
-                    ]
-                },
-                {
-                    buttons: [
-                        { text: '示例菜单 3', click: function (m) { alert('示例菜单 3'); } },
-                        { text: '示例菜单 4', click: function (m) { alert('示例菜单 4'); } },
-                        { text: '示例菜单 5', click: function (m) { alert('示例菜单 5'); } }
-                    ]
-                },
-                {
-                    buttons: [
-                        { text: '取消', click: function (m) { alert('取消'); } }
-                    ]
-                }
-            ]
-        });
-    */
+     bonui.actionsheet({
+     menus:[]        // 操作按钮组
+     // text:按钮名称
+     // click:按钮点击回调函数
+     // close:是否关闭 actionsheet
+     });
+     例：
+     bonui.actionsheet({
+     menus: [
+     {
+     buttons: [
+     { text: '示例菜单 1', click: function (m) { alert('示例菜单 1'); } },
+     { text: '示例菜单 2', click: function (m) { alert('示例菜单 2'); } }
+     ]
+     },
+     {
+     buttons: [
+     { text: '示例菜单 3', click: function (m) { alert('示例菜单 3'); } },
+     { text: '示例菜单 4', click: function (m) { alert('示例菜单 4'); } },
+     { text: '示例菜单 5', click: function (m) { alert('示例菜单 5'); } }
+     ]
+     },
+     {
+     buttons: [
+     { text: '取消', click: function (m) { alert('取消'); } }
+     ]
+     }
+     ]
+     });
+     */
     tools.actionsheet = function (params) {
         params = params || {};
 
@@ -382,10 +386,11 @@ function BonUi() {
 
         var model = $('<div class="actionsheet">\
                             <div class="bonui-mask"></div>\
-                            <div class="bonui-actionsheet bonui-actionsheet_toggle">\
+                            <div class="bonui-actionsheet">\
                             ' + menus.join('') + '\
                             </div>\
                         </div>');
+
 
         model.find(".bonui-actionsheet__menu").each(function (menu_index, me) {
             $(this).find(".bonui-actionsheet__cell").each(function (index, el) {
@@ -399,19 +404,23 @@ function BonUi() {
 
         tools.params.container.append(model);
 
+        setTimeout(function () {
+            model.find(".bonui-actionsheet").addClass('bonui-actionsheet_toggle');
+        }, 10);
+
         return model;
 
     };
 
     // 顶部提示消息 toptips
     /*
-        bonui.confirm({
-                    text:string,        // 消息内容    ''
-                    css:string,         // 显示样式     [bonui-toptips_success,bonui-toptips_warn]  ''
-                    closeTime:int       // 显示持续时间   毫秒  tools.params.toastCloseTime
-                 });
+     bonui.confirm({
+     text:string,        // 消息内容    ''
+     css:string,         // 显示样式     [bonui-toptips_success,bonui-toptips_warn]  ''
+     closeTime:int       // 显示持续时间   毫秒  tools.params.toastCloseTime
+     });
 
-    */
+     */
     function toptips(params) {
 
         params = params || {};
@@ -431,24 +440,24 @@ function BonUi() {
 
     //  顶部提示消息 成功！
     /*
-        bonui.toptipsSuccess({
-                    text:string,            // 提示文字 ***** 必填 *****
-                    closeTime:int           // 显示时间 tools.params.toastCloseTime
-                });
-    */
+     bonui.toptipsSuccess({
+     text:string,            // 提示文字 ***** 必填 *****
+     closeTime:int           // 显示时间 tools.params.toastCloseTime
+     });
+     */
     tools.toptipsSuccess = function (params) {
         params = params || {};
         params.css = 'bonui-toptips_success';
         toptips(params);
     };
 
-    //  顶部提示消息！
+    //  顶部提示消息 警告！
     /*        
-        bonui.toptipsWran({
-                    text:string,            // 提示文字 ***** 必填 *****
-                    closeTime:int           // 显示时间 tools.params.toastCloseTime
-                });
-    */
+     bonui.toptipsWran({
+     text:string,            // 提示文字 ***** 必填 *****
+     closeTime:int           // 显示时间 tools.params.toastCloseTime
+     });
+     */
     tools.toptipsWran = function (params) {
         params = params || {};
         params.css = 'bonui-toptips_warn';
@@ -457,71 +466,82 @@ function BonUi() {
 
     // picker 单列、多列选择器
     /*
-        bonui.picker({
-            input: string,              // 显示 Value 容器Id 带#号 如 #targetId  ****** 必填 ******
-            formatValue:function(vals){},       // 格式化 value 函数 function(vals){} vals:数据列集合
-                                        // 例：
-                                        // function (vals) {
-                                        //     if (vals.length > 0) {
-                                        // 
-                                        //         return vals[0].display + '—' + vals[1].display + '—' + vals[2].display;
-                                        // 
-                                        //     } else {
-                                        //         return '';
-                                        //     }
-                                        // },
-            
-            confirm: object,            // “确定”按钮 缺省：有“确定”按钮并使用 tools.params.pickerButtonConfirmText 的文本作为按钮文字，
-                                        // 例
-                                        // {
-                                        //     hasBtn:bool,                 // 是否有“确定”按钮
-                                        //     text:string,                 // “确定”按钮显示文字 '',
-                                        //     click: function (m, e) {}    // 按钮点击事件回调函数
-                                        //                                  // 例：function (m, e) {
-                                        //                                  //         console.log('onConfirm');
-                                        //                                  //     }
-                                        //                                  // },
-            cancle: object,             // “取消”按钮 缺省：有“取消”按钮并使用 tools.params.pickerButtonConfirmText 的文本作为按钮文字，
-                                        // 例
-                                        // {
-                                        //     hasBtn:bool,                 // 是否有“取消”按钮
-                                        //     text:string,                 // “取消”按钮显示文字 '',
-                                        //     click: function (m, e) {}    // 按钮点击事件回调函数
-                                        //                                  // 例：function (m, e) {
-                                        //                                  //         console.log('onConfirm');
-                                        //                                  //     }
-                                        //                                  // },
-            
-            cols:[],                    // 数据列 ****** 必填 ******
-                                        // 例：
-                                        // [
-                                        //      {
-                                        //          values:[{display:'',value:''},……]，         // 数据对象数组， ****** 必填 ****** (如果是占位符该项无效)
-                                        //                                                      // 例：{
-                                        //                                                      //          display:'',     // 显示值
-                                        //                                                      //          value:''        // 实际值
-                                        //                                                      //     }
-                                        //          onChange:function (picker, val, s) {}       // 数据项改变后回调函数
-                                        //                                                      // 例：(如果是占位符该项无效)
-                                        //                                                      // function (picker, val, s) {
-                                        //                                                      //     if (picker[1]) {
-                                        //                                                      //         picker[1].setValue(carVendors1[val]);
-                                        //                                                      //         if (picker[2]) {
-                                        //                                                      //             var _val = carVendors1[val][0].value;
-                                        //                                                      //             picker[2].setValue(carVendors2[_val]);
-                                        //                                                      //         }
-                                        //                                                      //     }
-                                        //                                                      // }
-                                        //          divider: bool,  // 是占位符 false   如果是占位符 values,onChange 都无效
-                                        //          content:string,  // 占位字符 ''      
-                                        //          width:int       // 该列的 css 样式
-                                        //      },
-                                        //      数据列2,
-                                        //      数据列3,
-                                        //      ……
-                                        // ]
-        });
-    */
+     bonui.picker({
+     input: string,              // 显示 Value 容器Id 带#号 如 #targetId  ****** 必填 ******
+     title:string,               // picker 标题 html
+     formatValue:function(vals){},       // 格式化 value 函数 function(vals){} vals:数据列集合
+     // 例：
+     // function (vals) {
+     //     if (vals.length > 0) {
+     //
+     //         return vals[0].display + '—' + vals[1].display + '—' + vals[2].display;
+     //
+     //     } else {
+     //         return '';
+     //     }
+     // },
+
+     confirm: object,            // “确定”按钮 缺省：有“确定”按钮并使用 tools.params.pickerButtonConfirmText 的文本作为按钮文字，
+     // 例
+     // {
+     //     hasBtn:bool,                 // 是否有“确定”按钮
+     //     text:string,                 // “确定”按钮显示文字 '',
+     //     click: function (obj) {}     // 按钮点击事件回调函数
+     //                                  // 例：function (obj) {
+     //     // obj ={
+     p: bonuiPickers,   // picker cols 对象数组
+     m: model,          // picker html对象
+     e: e               // 点击事件
+     }
+     //                                  //         console.log('onConfirm');
+     //                                  //     }
+     //                                  // },
+     cancle: object,             // “取消”按钮 缺省：有“取消”按钮并使用 tools.params.pickerButtonConfirmText 的文本作为按钮文字，
+     // 例
+     // {
+     //     hasBtn:bool,                 // 是否有“取消”按钮
+     //     text:string,                 // “取消”按钮显示文字 '',
+     //     click: function (obj) {}     // 按钮点击事件回调函数
+     //                                  // 例：function (obj) {
+     //     // obj ={
+     p: bonuiPickers,   // picker cols 对象数组
+     m: model,          // picker html对象
+     e: e               // 点击事件
+     }
+     //                                  //         console.log('onConfirm');
+     //                                  //     }
+     //                                  // },
+
+     cols:[],                    // 数据列 ****** 必填 ******
+     // 例：
+     // [
+     //      {
+     //          values:[{display:'',value:''},……]，         // 数据对象数组， ****** 必填 ****** (如果是占位符该项无效)
+     //                                                      // 例：{
+     //                                                      //          display:'',     // 显示值
+     //                                                      //          value:''        // 实际值
+     //                                                      //     }
+     //          onChange:function (picker, val, s) {}       // 数据项改变后回调函数
+     //                                                      // 例：(如果是占位符该项无效)
+     //                                                      // function (picker, val, s) {
+     //                                                      //     if (picker[1]) {
+     //                                                      //         picker[1].setValue(carVendors1[val]);
+     //                                                      //         if (picker[2]) {
+     //                                                      //             var _val = carVendors1[val][0].value;
+     //                                                      //             picker[2].setValue(carVendors2[_val]);
+     //                                                      //         }
+     //                                                      //     }
+     //                                                      // }
+     //          divider: bool,  // 是占位符 false   如果是占位符 values,onChange 都无效
+     //          content:string,  // 占位字符 ''
+     //          width:int       // 该列的 css 样式
+     //      },
+     //      数据列2,
+     //      数据列3,
+     //      ……
+     // ]
+     });
+     */
     tools.picker = function (params) {
 
         params = params || {};
@@ -547,15 +567,15 @@ function BonUi() {
                             valuesStr.push('<div class="swiper-slide bonui-picker-slide" data-val="' + (values[j].value ? values[j].value : values[j].display) + '" data-dsp="' + values[j].display + '">' + values[j].display + '</div>');
                         }
 
-                        colsStr.push('<div class="bonui-flex__item ' + (col.css ? col.css : '') + '">\
+                        colsStr.push('<div class="bonui-picker__group_item ' + (col.css ? col.css : '') + '">\
                                         <div class="swiper-container bonui-picker-container" id="bonuiPicker_' + pickerIndex + '">\
                                             <div class="swiper-wrapper">\
-                                              '+ valuesStr.join('') + '\
+                                              ' + valuesStr.join('') + '\
                                             </div>\
                                         </div>\
                                     </div>');
 
-                        pickers.push({ 'id': '#bonuiPicker_' + pickerIndex, 'onChange': onChange });
+                        pickers.push({'id': '#bonuiPicker_' + pickerIndex, 'onChange': onChange});
 
                         pickerIndex++;
 
@@ -609,7 +629,7 @@ function BonUi() {
                                 ' + _confirmHtml + '\
                             </div>\
                             <div class="bonui-picker__bd">\
-                                <div class="bonui-picker__group bonui-flex">\
+                                <div class="bonui-picker__group">\
                                     ' + colsStr.join('') + '\
                                     <div class="picker-center-highlight"></div>\
                                     <div class="bonui-picker__mask"></div>\
@@ -620,25 +640,6 @@ function BonUi() {
 
 
         tools.params.container.append(model);
-
-        model.find('.bonui-picker__confirm').click(function (e) {
-
-            if (params.confirm) {
-                if (params.confirm.click) params.confirm.click(model, e);
-            }
-            tools.close(model);
-
-        });
-
-        model.find('.bonui-picker__cancel').click(function (e) {
-
-            if (params.cancle) {
-                if (params.cancle.click) params.cancle.click(model, e);
-            }
-
-            tools.close(model);
-
-        });
 
         var bonuiPickers = [];
 
@@ -657,7 +658,7 @@ function BonUi() {
                         grabCursor: true,
                         centeredSlides: true,
                         slidesPerView: 'auto',
-                        coverflow: { rotate: 0, stretch: 0, depth: 50, modifier: 1, slideShadows: false },
+                        coverflow: {rotate: 0, stretch: 0, depth: 50, modifier: 1, slideShadows: false},
                         onSlideChangeEnd: changeEnd,
                         onTransitionEnd: changeEnd
                     });
@@ -681,7 +682,7 @@ function BonUi() {
                                 var _activeIndex = bonuiPickers[j].activeIndex,
                                     _$slide = $(bonuiPickers[j].slides[_activeIndex]);
 
-                                _vals.push({ 'values': _$slide.data('val'), 'display': _$slide.data('dsp') });
+                                _vals.push({'values': _$slide.data('val'), 'display': _$slide.data('dsp')});
                             }
 
                             if (params.formatValue) {
@@ -731,21 +732,48 @@ function BonUi() {
             }
         }
 
+        model.find('.bonui-picker__confirm').click(function (e) {
+
+            if (params.confirm) {
+                if (params.confirm.click) params.confirm.click({
+                    p: bonuiPickers,
+                    m: model,
+                    e: e
+                });
+            }
+            tools.close(model);
+
+        });
+
+        model.find('.bonui-picker__cancel').click(function (e) {
+
+            if (params.cancle) {
+                if (params.cancle.click) params.cancle.click({
+                    p: bonuiPickers,
+                    m: model,
+                    e: e
+                });
+            }
+
+            tools.close(model);
+
+        });
+
         return model;
 
     }
 
     //  消息框
     /*
-        消息框
-        bonui.message({
-                text:string,            // 提示文字 ***** 必填 *****
-                closeTime:int           // 显示时间 tools.params.toastCloseTime
-            });
-        例：
-        bonui.message({ text: '咋滴' });
+     消息框
+     bonui.message({
+     text:string,            // 提示文字 ***** 必填 *****
+     closeTime:int           // 显示时间 tools.params.toastCloseTime
+     });
+     例：
+     bonui.message({ text: '咋滴' });
 
-    */
+     */
     tools.message = function (params) {
 
         params = params || {};
@@ -776,14 +804,14 @@ function BonUi() {
 
     //后退提示
     /*
-        后退提示
-        bonui.backConfirm({
-            text:string             // 提示文字 ***** 必填 *****
-        });
+     后退提示
+     bonui.backConfirm({
+     text:string             // 提示文字 ***** 必填 *****
+     });
 
-        例：
-        bonui.backConfirm({text:'亲，评价还未完成，您确定要离开么？'});
-    */
+     例：
+     bonui.backConfirm({text:'亲，评价还未完成，您确定要离开么？'});
+     */
     tools.backConfirm = function (params) {
 
         params = $.extend({}, {}, (params || {}));
@@ -809,77 +837,77 @@ function BonUi() {
 
     //滚动加载
     /*
-        滚动加载
-        bonui.scrollLoad({
-                input: string,                      // 显示Loadmore 容器 ID       ***** 必填 *****
-                scrollContainer：string||object     // 需要做滚动加载事件的容器   window
-                viewportHeight: int,                // 可视窗口高度               window.screen.height
-                goTop:{
-                    input:string,                   // 返回顶部标签 id 或者 class ***** 必填 ***** 
-                    minScrollTop: int               // 需要显示‘返回顶部'的滚动条最小位置 0                  
-                },
-                callBack:function                   // 滚动事件回调函数  
-                                                    // {
-                                                            loadMoreTop: int,           // Loadmore 当前相对顶部的距离
-                                                            viewportHeight: int,        // 可视窗口高度 （同 传入参数）
-                                                            loadFlag: bool,             // 是否可执行加载事件
-                                                            setLoadMore: function ,     // 设置 Loadmore 容器显示样式
-                                                            chkLoadMore: function       // 检查列表内容是否已经填充超过视口高度
-                                                        }
-                                                    // 例：
-                                                    // params.callBack({
-                                                            loadMoreTop: loadMoreTop,
-                                                            viewportHeight: params.viewportHeight,
-                                                            loadFlag: loadFlag,
-                                                            setLoadMore: function (obj) {
-                                                                loadMore.removeClass('loading complete').addClass(obj.css);
-                                                            },
-                                                            chkLoadMore: function (obj) {
-                                                                loadFlag = obj.loadFlag;
-                                                                if (loadMore.offset().top < params.viewportHeight) {
-                                                                    $(params.scrollContainer).trigger('scroll');
-                                                                }
-                                                            }
-                                                        });
-            });
+     滚动加载
+     bonui.scrollLoad({
+     input: string,                      // 显示Loadmore 容器 ID       ***** 必填 *****
+     scrollContainer：string||object     // 需要做滚动加载事件的容器   window
+     viewportHeight: int,                // 可视窗口高度               window.screen.height
+     goTop:{
+     input:string,                   // 返回顶部标签 id 或者 class ***** 必填 *****
+     minScrollTop: int               // 需要显示‘返回顶部'的滚动条最小位置 0
+     },
+     callBack:function                   // 滚动事件回调函数
+     // {
+     loadMoreTop: int,           // Loadmore 当前相对顶部的距离
+     viewportHeight: int,        // 可视窗口高度 （同 传入参数）
+     loadFlag: bool,             // 是否可执行加载事件
+     setLoadMore: function ,     // 设置 Loadmore 容器显示样式
+     chkLoadMore: function       // 检查列表内容是否已经填充超过视口高度
+     }
+     // 例：
+     // params.callBack({
+     loadMoreTop: loadMoreTop,
+     viewportHeight: params.viewportHeight,
+     loadFlag: loadFlag,
+     setLoadMore: function (obj) {
+     loadMore.removeClass('loading complete').addClass(obj.css);
+     },
+     chkLoadMore: function (obj) {
+     loadFlag = obj.loadFlag;
+     if (loadMore.offset().top < params.viewportHeight) {
+     $(params.scrollContainer).trigger('scroll');
+     }
+     }
+     });
+     });
 
-        例：
-        
-        var _viewportHeight = window.screen.height - ($('#footer').height())
+     例：
 
-        bonui.scrollLoad({
-            input: '#loadMore',
-            viewportHeight: _viewportHeight,
-            callBack: function (obj) {
-                if (CNT < 8) {
-                    _loadFlag = obj.loadFlag;
-                    obj.setLoadMore({ css: 'loading' });
+     var _viewportHeight = window.screen.height - ($('#footer').height())
 
-                    CNT++;
-                    setTimeout(function () {
-                        var htmls = [];
+     bonui.scrollLoad({
+     input: '#loadMore',
+     viewportHeight: _viewportHeight,
+     callBack: function (obj) {
+     if (CNT < 8) {
+     _loadFlag = obj.loadFlag;
+     obj.setLoadMore({ css: 'loading' });
 
-                        for (var i = 0; i < 3; i++) {
-                            htmls.push('<li class="bonui-list-group_item">\
-                                            <div class="bonui-list-group_item_mn">' + CNT + ' - ' + i + ' 习近平号召闻鸡起舞继续进发</div>\
-                                        </li>');
-                        }
+     CNT++;
+     setTimeout(function () {
+     var htmls = [];
 
-                        $('#listContent').append(htmls);
+     for (var i = 0; i < 3; i++) {
+     htmls.push('<li class="bonui-list-group_item">\
+     <div class="bonui-list-group_item_mn">' + CNT + ' - ' + i + ' 习近平号召闻鸡起舞继续进发</div>\
+     </li>');
+     }
 
-                        obj.setLoadMore({ css: 'complete' });
+     $('#listContent').append(htmls);
 
-                        _loadFlag = true;
-                        obj.chkLoadMore({ loadFlag: _loadFlag });
+     obj.setLoadMore({ css: 'complete' });
 
-                    }, 3000);
+     _loadFlag = true;
+     obj.chkLoadMore({ loadFlag: _loadFlag });
 
-                } else {
-                    obj.setLoadMore({ css: 'complete' });
-                }
-            }
-        });
-    */
+     }, 3000);
+
+     } else {
+     obj.setLoadMore({ css: 'complete' });
+     }
+     }
+     });
+     */
     tools.scrollLoad = function (params) {
 
         params = $.extend({},
@@ -905,7 +933,7 @@ function BonUi() {
                 });
 
                 $(params.goTop.input).click(function () {
-                    $('html,body').animate({ scrollTop: '0px' }, 200);
+                    $('html,body').animate({scrollTop: '0px'}, 200);
                 });
 
             }
@@ -937,70 +965,43 @@ function BonUi() {
     }
 
     //返回顶部
+    /*
+     bonui.goTop({
+     minScrollTop:int,   // 需要显示‘返回顶部'的滚动条最小位置 默认 0
+     animateTime:int,    // 返回顶部用时 默认 200
+     });
+     */
     tools.goTop = function (params) {
 
-        params = $.extend({}, {}, (params ? params : {}));
+        params = getParamsObj({
+            defauleParams: {
+                minScrollTop: 0,
+                animateTime: 200
+            },
+            newParams: {}
+        })
 
         $(window).scroll(function () {
 
             _goTop({
                 input: params.input,
                 currentScrollTop: $(window).scrollTop(),
-                minScrollTop: 128
+                minScrollTop: params.minScrollTop
             });
 
         });
 
         $(params.input).click(function () {
-            $('html,body').animate({ scrollTop: '0px' }, 200);
+            $('html,body').animate({scrollTop: '0px'}, params.animateTime);
         });
 
     }
-
-    // 返回顶部 内部函数
-    /*
-        _goTop({
-                input:string,               // 返回顶部标签 id 或者 class ***** 必填 *****
-                currentScrollTop:int,       // 当前容器的滚动条位置 ***** 必填 *****
-                minScrollTop:int            // 需要显示‘返回顶部'的滚动条最小位置 0
-            });
-
-        例：
-         _goTop({
-                input:'#goTop',                                 // 返回顶部标签 id 或者 class ***** 必填 *****
-                currentScrollTop:$(window).scrollTop(),         // 当前容器的滚动条位置 ***** 必填 *****
-                minScrollTop:128                                // 需要显示‘返回顶部'的滚动条最小位置 0
-        });
-    */
-    function _goTop(params) {
-
-        params = $.extend({}, { minScrollTop: 0 }, (params ? params : {}));
-
-        var $goTop = $(params.input);
-
-        if (params.currentScrollTop > params.minScrollTop) {
-            $goTop.addClass('active');
-        } else {
-            $goTop.removeClass('active');
-        }
-
-
-
-
-    }
-
-    /*
-        模态框关闭按钮
-    */
-    tools.params.container.on('click', '.bonui-modal-close', function () {
-        $(this).closest('.modal').remove();
-    });
 
     //文件上传组件
     /*
-        文件上传组件
-    
-    */
+     文件上传组件
+
+     */
     tools.uploadFile = function (params) {
         params = params || {};
 
@@ -1052,22 +1053,27 @@ function BonUi() {
 
     //小图片关闭按钮
     /*
-        小图片关闭按钮
-        
-        bonui.upimgClose({
-            input: string,          //  按钮对象
-            callBack: function      //  回调函数
-        });
-        
-        例：
-        bonui.upimgClose({
-            input: '#upls .bonui-upimg_close,#uplsb .bonui-upimg_close',
-            callBack: function (_obj) {
-                console.log(_obj.upImg.data('url'));
-            }
-        });
-    
-    */
+     小图片关闭按钮
+
+     bonui.upimgClose({
+     input: string,          //  按钮对象
+     callBack: function      //  回调函数
+     //  function(_obj){
+     _obj        // Object
+     _obj.ts     // 当前按钮 对象
+     _obj.upImg  // 当前 .bonui-upimg div 对象
+     }
+     });
+
+     例：
+     bonui.upimgClose({
+     input: '#upls .bonui-upimg_close,#uplsb .bonui-upimg_close',
+     callBack: function (_obj) {
+     console.log(_obj.upImg.data('url'));
+     }
+     });
+
+     */
     tools.upimgClose = function (params) {
 
         params = params || {};
@@ -1080,7 +1086,7 @@ function BonUi() {
                 $upImg.remove();
 
                 if (params.callBack && typeof (params.callBack) == 'function') {
-                    params.callBack({ ts: $t, upImg: $upImg });
+                    params.callBack({ts: $t, upImg: $upImg});
                 }
                 return false;
             });
@@ -1089,59 +1095,59 @@ function BonUi() {
 
     //预览大图
     /*
-        预览大图
-        bonui.upimgPreview({
-            inputContainer:string,                  // 触发事件对象容器
-            input: string,                          // 触发事件对象
-            tapClose: bool,                         // 单击图片时触发关闭 true
-            deleteButton: {                         // 删除按钮
-                css: string,                        // 自定义 class 追加到原有 class 后
-                style: string,                      // 自定义行内样式 格式和原 HTML 行内样式一致
-                callBack: function(obj),            // 执行完删除操作后的回调函数
-                callBackBefore: function(obj)       // 在执行删除操作前执行此函数内容
-                                                    // 参数 obj.deleteFunction(); 执行删除操作
-            },
-            closeButton: {                          // 关闭按钮
-                visibility: bool,                   // 是否显示 true
-                css:string,                         // 自定义 class 追加到原有 class 后
-                style:string                        // 自定义行内样式 格式和原 HTML 行内样式一致
-            },
-            closeCallBack: function (obj) {}        // 关闭后回调函数
-        });
-    
-        例：
-        bonui.upimgPreview({
-            inputContainer: '#upls',
-            input: '.bonui-upimg',
-            tapClose: true,
-            deleteButton: {
-                css: '',
-                style: '',
-                callBack: function (obj) { },
-                callBackBefore: function (obj) {
-                    //弹出提示（组件混合使用）
-                    var m = bonui.confirm({
-                        hasTitle: false,
-                        text: 'Are you sure?',
-                        buttonConfirm: {
-                            click: function () {
-                                obj.deleteFunction();
-                            }
-                        }
-                    });
-    
-                    ////延时
-                    //setTimeout(obj.deleteFunction, 2000);
-                }
-            },
-            closeButton: {
-                visibility: true,
-                css: '',
-                style: ''
-            },
-            closeCallBack: function (obj) {}
-        });
-    */
+     预览大图
+     bonui.upimgPreview({
+     inputContainer:string,                  // 触发事件对象容器
+     input: string,                          // 触发事件对象
+     tapClose: bool,                         // 单击图片时触发关闭 true
+     deleteButton: {                         // 删除按钮
+     css: string,                        // 自定义 class 追加到原有 class 后
+     style: string,                      // 自定义行内样式 格式和原 HTML 行内样式一致
+     callBack: function(obj),            // 执行完删除操作后的回调函数
+     callBackBefore: function(obj)       // 在执行删除操作前执行此函数内容
+     // 参数 obj.deleteFunction(); 执行删除操作
+     },
+     closeButton: {                          // 关闭按钮
+     visibility: bool,                   // 是否显示 true
+     css:string,                         // 自定义 class 追加到原有 class 后
+     style:string                        // 自定义行内样式 格式和原 HTML 行内样式一致
+     },
+     closeCallBack: function (obj) {}        // 关闭后回调函数
+     });
+
+     例：
+     bonui.upimgPreview({
+     inputContainer: '#upls',
+     input: '.bonui-upimg',
+     tapClose: true,
+     deleteButton: {
+     css: '',
+     style: '',
+     callBack: function (obj) { },
+     callBackBefore: function (obj) {
+     //弹出提示（组件混合使用）
+     var m = bonui.confirm({
+     hasTitle: false,
+     text: 'Are you sure?',
+     buttonConfirm: {
+     click: function () {
+     obj.deleteFunction();
+     }
+     }
+     });
+
+     ////延时
+     //setTimeout(obj.deleteFunction, 2000);
+     }
+     },
+     closeButton: {
+     visibility: true,
+     css: '',
+     style: ''
+     },
+     closeCallBack: function (obj) {}
+     });
+     */
     tools.upimgPreview = function (params) {
         params = params || {};
         if (params.input) {
@@ -1192,25 +1198,26 @@ function BonUi() {
                     }
                 });
 
-
                 if (params.closeButton) {
                     $m.find('.bonui-upimg-swiper-close').click(function () {
                         upimgSwiperClose();
                     });
                 }
 
+                //删除按钮动作
                 if (params.deleteButton) {
                     $m.find('.bonui-upimg-swiper-delete').click(function () {
 
                         if (typeof params.deleteButton.callBackBefore == 'function') {
 
                             params.deleteButton.callBackBefore({
-                                deleteFunction: function () { upimgPreviewDelete(); }
+                                deleteFunction: function () {
+                                    upimgPreviewDelete();
+                                }
                             });
 
                         } else {
                             upimgPreviewDelete();
-
                         }
                     });
                 }
@@ -1231,7 +1238,7 @@ function BonUi() {
 
                     if (typeof params.deleteButton.callBack == 'function') {
 
-                        params.deleteButton.callBack({ index: realIndex });
+                        params.deleteButton.callBack({index: realIndex});
 
                     }
                 }
@@ -1239,7 +1246,7 @@ function BonUi() {
                 function upimgSwiperClose() {
 
                     //关闭
-                    $m.animate({ 'opacity': '0' }, 300, function () {
+                    $m.animate({'opacity': '0'}, 300, function () {
                         bonuiUpimgSwiper.destroy(false);
                         delete bonuiUpimgSwiper;
                         $m.remove();
@@ -1258,31 +1265,64 @@ function BonUi() {
     };
 
     // 标签页
+    /*
+     * 标签页
+     bonui.tab({
+     inputContainer: string,        // 标签容器（***** 必填 *****）
+     input: string,                 // 标签项  默认 '.bonui-tab__item'
+     callBack: function             // 点击标签项后执行的回调函数
+     function(obj){
+     // obj 被点击的标签项
+     }
+     });
+     例：
+     *    bonui.tab({
+     inputContainer: '#bonuiTabNav',
+     input: '.bonui-tab__item',
+     callBack: function (obj) {
+     console.log(obj.item.data('target'));
+     }
+     });
+     * */
     tools.tab = function (params) {
-
-        params = params || {};
+        var defaultParams = {
+            input: '.bonui-tab__item'
+        };
+        params = $.extend({}, defaultParams, (params ? params : {}));
 
         tools.params.container.on('click', params.inputContainer + ' ' + params.input, function () {
 
-            var $ts = $(this),
-                toggle = $ts.data('toggle'),
-                $tsItem = !$ts.hasClass('bonui-tab__item') ? $ts.closest('.bonui-tab__item') : $ts;
+            var $ts = $(this);
 
-            $tsItem.addClass('active').siblings('.bonui-tab__item').removeClass('active');
+            $ts.addClass('active').siblings(params.input).removeClass('active');
 
             if (typeof params.callBack == 'function') {
-                params.callBack({ item: $ts });
+                params.callBack({item: $ts});
             }
 
         });
 
     }
 
+    // AJAX请求
+    /*  bonui.ajax(
+     {
+     url:string,             // 请求UIL
+     type:string,            // 请求类型 默认 get
+     success:function,       // 同 jQuery.ajax.success
+     complete:function,      // 同 jQuery.ajax.complete
+     error:function          // 同 jQuery.ajax.error
+     }
+     );
+     */
     tools.ajax = function (params) {
 
-        params = params || {};
-
-        params.type = params.type ? params.type : 'get'
+        params = getParamsObj({
+            defauleParams: {
+                type: 'get'
+            },
+            newParams: params
+        });
 
         return $.ajax({
             url: params.url,
@@ -1294,18 +1334,78 @@ function BonUi() {
         });
     }
 
-    // 九宫格
+    // 九宫格 已作废
     tools.grid = function (params) {
 
-        params = getParamsObj({ newParams: params });
+        params = getParamsObj({newParams: params});
 
         var $gridMn = $(params.input).find('.bonui-grid_mn'),
             _colItemW = $gridMn.eq(0).width();
 
         $gridMn.height(_colItemW);
 
-        return { height: _colItemW };
+        return {height: _colItemW};
     }
+
+    // 全屏板块
+    tools.plank = function (params) {
+
+        var _defauleParams = {};
+        params = getParamsObj({defauleParams: _defauleParams, newParams: params});
+
+        var model = $('<div class="plank ' + (params.css ? params.css : '') + '">\
+                            <div class="bonui-mask fadeIn animated"></div>\
+                            <div class="bonui-plank">\
+                                ' + params.html + '\
+                            </div>\
+                        </div>');
+
+        tools.params.container.append(model);
+
+        var bonuiPlank = model.find('.bonui-plank'),
+            bonuiMask = model.find('.bonui-mask');
+
+        bonuiPlank
+            .addClass('slideInRight animated')
+            .one('webkitAnimationEnd',function (argument) {
+                $(this).removeClass('slideInRight animated');
+            });
+
+        bonuiMask
+            .one('webkitAnimationEnd',function (argument) {
+                $(this).removeClass('fadeIn animated');
+            })
+            .one('click',function () {
+
+                bonuiPlank
+                    .addClass('slideOutRight animated')
+                    .one('webkitAnimationEnd',function function_name(argument) {                    
+                        $(this).removeClass('slideOutRight animated').remove();
+                        
+                    });
+                    
+                bonuiMask
+                    .addClass('fadeOut animated')
+                    .one('webkitAnimationEnd',function (argument) {
+                        dialogCloseAfter();
+                        bonui.close(model);
+                    });
+
+            });
+
+        dialogShowBefore();
+
+        return model;
+
+    }
+
+    // 模态框关闭按钮
+    /*
+     模态框关闭按钮
+     */
+    tools.params.container.on('click', '.bonui-modal-close', function () {
+        $(this).closest('.modal').remove();
+    });
 
     // 关闭 主容器 滚动条
     function dialogShowBefore() {
@@ -1317,7 +1417,60 @@ function BonUi() {
         tools.params.container.removeClass('overflow-hidden');
     }
 
+    // 返回顶部 内部函数
+    /*
+     _goTop({
+     input:string,               // 返回顶部标签 id 或者 class ***** 必填 *****
+     currentScrollTop:int,       // 当前容器的滚动条位置 ***** 必填 *****
+     minScrollTop:int            // 需要显示‘返回顶部'的滚动条最小位置 0
+     });
+
+     例：
+     _goTop({
+     input:'#goTop',                                 // 返回顶部标签 id 或者 class ***** 必填 *****
+     currentScrollTop:$(window).scrollTop(),         // 当前容器的滚动条位置 ***** 必填 *****
+     minScrollTop:128                                // 需要显示‘返回顶部'的滚动条最小位置 0
+     });
+     */
+    function _goTop(params) {
+
+        params = $.extend({}, {minScrollTop: 0}, (params ? params : {}));
+
+        var $goTop = $(params.input);
+
+        if (params.currentScrollTop > params.minScrollTop) {
+            $goTop.addClass('active');
+        } else {
+            $goTop.removeClass('active');
+        }
+
+
+    }
+
     //获取参数对象
+    /*
+     *   使用 jQuery $.extend() 函数追加对象
+     *   getParamsObj({
+     defauleParams: Object       // 参数对象默认值
+     newParams: Object           // 新参数值
+     });
+     // 返回 一个新的 合并后的新参数对象
+
+     例：
+     params = getParamsObj({
+     defauleParams: {
+     aa: '123'
+     bb: 'asd'
+     },
+     newParams:{
+     aa:'456',
+     cc:'ASD"
+     }
+     });
+
+     params = { aa:'456',bb: 'asd', cc:'ASD"};
+     *
+     * */
     function getParamsObj(obj) {
         return $.extend({}, (obj.defauleParams ? obj.defauleParams : {}), (obj.newParams ? obj.newParams : {}));
     }
